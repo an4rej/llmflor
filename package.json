@@ -1,0 +1,11 @@
+{
+  "name": "florista-tomsk",
+  "private": true,
+  "scripts": {
+    "migrate": "node scripts/migrate-to-mysql.cjs",
+    "migrate:sql": "node scripts/migrate-to-mysql.cjs --sql-only"
+  },
+  "dependencies": {
+    "mysql2": "^3.14.0"
+  }
+}
