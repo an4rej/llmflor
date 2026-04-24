@@ -1,26 +1,26 @@
-# Автодеплой на Timeweb при push в main (FTP через GitHub Actions).
+# Деплой на Timeweb по FTP из GitHub Actions.
 #
-# Секреты → Actions → Secrets:
-#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_SERVER_DIR
-#   FTP_SERVER_DIR — путь ОТ КОРНЯ FTP при входе в FileZilla, со слэшем в конце.
-#   Частая ошибка: заливка в public_html/ у корня, тогда сайт лежит в i.solflo.ru/public_html/
+# Ветки:
+#   main    → секрет FTP_SERVER_DIR   (ваш текущий «не прод» или как настроите)
+#   develop → секрет FTP_SERVER_DIR_BRANCH (отдельная папка на хостинге для превью ветки)
 #
+# Общие секреты: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
 # Variables: FTP_DEPLOY_PROTOCOL=ftps, FTP_PORT
 #
-# Если в Actions «успех», а на сайте старые файлы:
-#   1) Проверьте FTP_SERVER_DIR = тот же каталог, откуда открывается сайт в файловом менеджере Timeweb.
-#   2) Запустите workflow вручную с галкой «Полная перезаливка» (очистит server-dir и зальёт заново).
-#   3) Либо по FTP удалите на сервере файл .ftp-deploy-sync-state.json (если остался от старых тестов).
+# Чтобы использовать другую ветку вместо develop — замените имя в on.push.branches
+# и в проверке REF=develop ниже.
 
 name: Deploy to Timeweb
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - develop
   workflow_dispatch:
     inputs:
       full_reset:
-        description: Полная перезаливка (удаляет содержимое server-dir, затем заливает репозиторий)
+        description: Полная перезаливка (удаляет содержимое целевого server-dir)
         required: false
         type: boolean
         default: false
@@ -41,41 +41,55 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Цель деплоя
+        run: |
+          echo "Ветка: ${GITHUB_REF_NAME}"
+          echo "Коммит: ${GITHUB_SHA}"
+
       - name: Что уходит на сервер (проверка)
         run: |
           echo "Корень репозитория:"
           ls -la
           if [ -f index.html ]; then
-            echo "index.html первые байты:"
             head -c 200 index.html | wc -c
-            echo "(в логе сравните с тем, что открываете на хостинге по FTP)"
+            echo "байт из начала index.html"
           fi
 
       - name: Проверка секретов
         env:
+          REF: ${{ github.ref_name }}
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
+          FTP_SERVER_DIR_BRANCH: ${{ secrets.FTP_SERVER_DIR_BRANCH }}
         run: |
           missing=""
           [ -z "$FTP_SERVER" ] && missing="${missing} FTP_SERVER"
           [ -z "$FTP_USERNAME" ] && missing="${missing} FTP_USERNAME"
           [ -z "$FTP_PASSWORD" ] && missing="${missing} FTP_PASSWORD"
-          [ -z "$FTP_SERVER_DIR" ] && missing="${missing} FTP_SERVER_DIR"
-          if [ -n "$missing" ]; then
-            echo "::error::Добавьте секреты Actions:$missing"
+          if [ "$REF" = "main" ]; then
+            [ -z "$FTP_SERVER_DIR" ] && missing="${missing} FTP_SERVER_DIR"
+            TARGET_DIR="$FTP_SERVER_DIR"
+          elif [ "$REF" = "develop" ]; then
+            [ -z "$FTP_SERVER_DIR_BRANCH" ] && missing="${missing} FTP_SERVER_DIR_BRANCH"
+            TARGET_DIR="$FTP_SERVER_DIR_BRANCH"
+          else
+            echo "::error::Деплой только для веток main и develop. Сейчас: $REF"
             exit 1
           fi
-          case "$FTP_SERVER_DIR" in
+          if [ -n "$missing" ]; then
+            echo "::error::Задайте секреты Actions:$missing"
+            exit 1
+          fi
+          case "$TARGET_DIR" in
             */) ;;
             *)
-              echo "::error::FTP_SERVER_DIR должен заканчиваться на /"
+              echo "::error::Путь на FTP должен заканчиваться на / (сейчас для $REF)"
               exit 1
               ;;
           esac
 
-      # ftp-deploy открывает state-name локально; каталог должен существовать
       - name: Каталог state для FTP-Deploy
         run: mkdir -p .deploy-state
 
@@ -86,10 +100,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          server-dir: ${{ github.ref_name == 'main' && secrets.FTP_SERVER_DIR || secrets.FTP_SERVER_DIR_BRANCH }}
           port: ${{ vars.FTP_PORT || '21' }}
-          # Отдельный state-файл — после смены с дефолтного будет полная пересинхронизация хешей
-          state-name: .deploy-state/llmflor-ftp-deploy.json
+          state-name: .deploy-state/llmflor-${{ github.ref_name }}.json
           dangerous-clean-slate: ${{ github.event_name == 'workflow_dispatch' && inputs.full_reset == true }}
           log-level: standard
           timeout: 120000
@@ -106,11 +119,11 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          server-dir: ${{ github.ref_name == 'main' && secrets.FTP_SERVER_DIR || secrets.FTP_SERVER_DIR_BRANCH }}
           protocol: ftps
           security: loose
           port: ${{ vars.FTP_PORT || '21' }}
-          state-name: .deploy-state/llmflor-ftp-deploy.json
+          state-name: .deploy-state/llmflor-${{ github.ref_name }}.json
           dangerous-clean-slate: ${{ github.event_name == 'workflow_dispatch' && inputs.full_reset == true }}
           log-level: standard
           timeout: 120000
