@@ -75,6 +75,10 @@ jobs:
               ;;
           esac
 
+      # ftp-deploy открывает state-name локально; каталог должен существовать
+      - name: Каталог state для FTP-Deploy
+        run: mkdir -p .deploy-state
+
       - name: Deploy по FTP
         if: ${{ vars.FTP_DEPLOY_PROTOCOL != 'ftps' }}
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
