@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Florista — цветочный магазин: свежие букеты, доставка за 90 минут, подписка на цветы." />
+    <title>Florista — цветочный магазин</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="sticky-top header-blur border-bottom">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-2">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img
+              class="brand-logo"
+              src="./assets/logo21.png"
+              width="36"
+              height="36"
+              alt="Florista"
+              loading="eager"
+              decoding="async"
+            />
+            <span class="fw-bold">Florista</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMain"
+            aria-controls="navMain"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#catalog"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Каталог
+                </a>
+                <div class="dropdown-menu dropdown-menu-end p-2 catalog-menu">
+                  <div class="catalog-mega" role="menu">
+                    <div class="catalog-mega-left" aria-label="Разделы каталога">
+                      <a class="dropdown-item catalog-top" href="./section.html?id=sale">Акции</a>
+                      <a class="dropdown-item catalog-top" href="./section.html?id=roses">Розы</a>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=bouquets">Букеты</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Букеты">
+                          <h6 class="dropdown-header">Букеты</h6>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-mixed">Сборные букеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-mono">Монобукеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-compliments">Комплименты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-exclusive">Эксклюзивные букеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-durable">Букеты из стойких цветов</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-roses">Букеты с розами</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-chrysanthemum">Букеты с хризантемой</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-alstroemeria">Букеты с альстромерией</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-peonies">Букеты с пионами</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-orchid">Букеты с орхидеей</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-hydrangea">Букеты с гортензией</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-gypsophila">Букеты с гипсофилой</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-tulips">Букеты с тюльпанами</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=compositions">Композиции</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Композиции">
+                          <h6 class="dropdown-header">Композиции</h6>
+                          <a class="dropdown-item" href="./section.html?id=comp-roses">Композиции из роз</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-mixed">Сборные композиции</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-baskets">Корзины с цветами</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-hatboxes">Композиции в шляпной коробке</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-heart">Композиции в сердце</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-boxes">Коробки и сумочки с цветами</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=balloons">Воздушные шары</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Воздушные шары">
+                          <h6 class="dropdown-header">Воздушные шары</h6>
+                          <a class="dropdown-item" href="./section.html?id=bal-foil">Фольгированные</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-latex">Латексные</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-men">Шары для мужчины</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-girl">Шары для девушки</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-birthday">Шары на день рождения</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-maternity">Выписка из роддома</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-box">Коробка с шарами</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-piece">Поштучно</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-sets">Сеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-stars">Звезды</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-numbers">Цифры</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-14feb">Шары на 14 февраля</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-23feb">Шары на 23 февраля</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-wedding">Шары на свадьбу</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-graduation">Шары на выпускной</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-kindergarten">Шары в детский сад</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-8mar">Шары на 8 марта</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-mothersday">Шары на день матери</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-anniversary">Шары на юбилей</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-newyear">Шары на Новый год</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-1sep">Шары на 1 сентября</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=gifts">Подарки</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Подарки">
+                          <h6 class="dropdown-header">Подарки</h6>
+                          <a class="dropdown-item" href="./section.html?id=gifts-toys">Игрушки</a>
+                          <a class="dropdown-item" href="./section.html?id=gifts-sweets">Конфеты и сладкие подарки</a>
+                          <a class="dropdown-item" href="./section.html?id=gifts-balloons">Воздушные шары к букету</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-mega-hint text-secondary small">
+                      Наведите курсор на раздел, чтобы увидеть подразделы.
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#why">Почему мы</a></li>
+              <li class="nav-item"><a class="nav-link" href="#delivery">Доставка</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+              <li class="nav-item py-1 py-lg-0 dropdown" id="floristaNavCart">
+                <button
+                  type="button"
+                  class="btn position-relative p-2 rounded-3 d-flex align-items-center justify-content-center text-body bg-transparent border-0"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                  aria-label="Корзина. Товаров: 0"
+                  id="floristaCartBtn"
+                >
+                  <span class="florista-cart-ico" aria-hidden="true">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 8V6C9 4.34 10.34 3 12 3C13.66 3 15 4.34 15 6V8"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M5 8.5H19L20 21H4L5 8.5Z"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary florista-cart-badge"
+                    id="floristaCartCount"
+                    style="min-width: 1rem; font-size: 0.6rem; padding: 0.2rem 0.4rem"
+                    hidden
+                    >0</span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-end p-0 mini-cart"
+                  aria-label="Содержимое корзины"
+                  style="min-width: min(100vw - 2rem, 380px)"
+                >
+                  <div class="p-3 border-bottom d-flex align-items-center justify-content-between gap-2">
+                    <span class="fw-bold">Корзина</span>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-link text-secondary text-decoration-none p-0"
+                      id="floristaCartClear"
+                    >
+                      Очистить
+                    </button>
+                  </div>
+                  <div class="mini-cart__body" id="floristaCartList"></div>
+                  <p class="mini-cart__empty p-3 mb-0 text-center text-secondary small" id="floristaCartEmpty">
+                    Корзина пуста. Добавьте букет из каталога.
+                  </p>
+                  <div class="p-3 border-top" id="floristaCartFooter" hidden>
+                    <div class="d-flex justify-content-between align-items-baseline mb-2">
+                      <span class="text-secondary">Итого</span>
+                      <span class="fw-bold fs-5" id="floristaCartTotal">0 ₽</span>
+                    </div>
+                    <a class="btn btn-primary w-100" id="floristaCartCheckout" href="./checkout.html"
+                      >Оформить заказ</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <button
+                  class="btn btn-primary btn-sm px-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero py-5 py-lg-6">
+        <div class="container">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-12 col-lg-6">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border rounded-pill px-3 py-2">
+                  Доставка за 90 минут
+                </span>
+                <span class="badge text-bg-light border rounded-pill px-3 py-2">
+                  Фото перед отправкой
+                </span>
+                <span class="badge text-bg-light border rounded-pill px-3 py-2">
+                  Сезонные коллекции 2026
+                </span>
+              </div>
+
+              <h1 class="display-5 fw-bold lh-sm">
+                Букеты, которые выглядят как
+                <span class="text-gradient">подарок будущего</span>
+              </h1>
+              <p class="lead text-secondary mt-3 mb-4">
+                Собираем букеты из свежих цветов, подбираем упаковку, добавляем открытку и доставляем
+                точно ко времени. От мини-комплиментов до свадебных сетов.
+              </p>
+
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary btn-lg px-4" href="#catalog">Выбрать букет</a>
+                <button
+                  class="btn btn-outline-primary btn-lg px-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Быстрый заказ
+                </button>
+              </div>
+
+              <div class="mt-4 d-flex flex-wrap gap-3">
+                <div class="stat">
+                  <div class="stat-value">4.9/5</div>
+                  <div class="stat-label">средняя оценка</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">2 000+</div>
+                  <div class="stat-label">доставок в месяц</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">0 ₽</div>
+                  <div class="stat-label">открытка и лента</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="hero-week-carousel">
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="min-w-0">
+                    <div class="hero-week-label mb-0">Коллекция недели</div>
+                    <p class="text-secondary small mb-0 mt-1 d-none d-sm-block">До 6 позиций, одновременно 2 в ряд. Листайте или прокручивайте.</p>
+                  </div>
+                  <div
+                    class="d-flex gap-1 flex-shrink-0"
+                    role="group"
+                    aria-label="Прокрутка витрины"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light border hero-week-carousel__btn"
+                      data-hero-week-arrow="prev"
+                      disabled
+                      aria-label="Предыдущие товары"
+                    >
+                      <span class="px-1" aria-hidden="true">‹</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light border hero-week-carousel__btn"
+                      data-hero-week-arrow="next"
+                      aria-label="Следующие товары"
+                    >
+                      <span class="px-1" aria-hidden="true">›</span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="hero-week-carousel__viewport"
+                  id="heroWeekCarousel"
+                  tabindex="0"
+                  role="region"
+                  aria-roledescription="карусель"
+                  aria-label="Коллекция недели — витрина"
+                >
+                  <div class="hero-week-carousel__track">
+                    <div class="hero-week-carousel__slide">
+                      <article class="product card h-100 hero-week-carousel__card">
+                        <div class="product-media">
+                          <a
+                            class="product-link"
+                            href="./product.html?id=nezhnyy-rassvet"
+                            aria-label="Открыть: Нежный рассвет"
+                            ><div class="product-img product-img--1" role="img" aria-label=""></div
+                          ></a>
+                          <span class="badge text-bg-dark product-badge">Хит</span>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="h6 fw-semibold mb-1">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=nezhnyy-rassvet">Нежный рассвет</a>
+                          </h3>
+                          <p class="text-secondary small hero-week-carousel__excerpt mb-2">Пионы, ранункулюсы, эвкалипт.</p>
+                          <div class="d-flex flex-column gap-1">
+                            <div class="fw-bold small">2 990 ₽</div>
+                            <div class="d-flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                data-florista-add
+                                data-florista-id="nezhnyy-rassvet"
+                              >
+                                В корзину
+                              </button>
+                              <a class="btn btn-light border btn-sm" href="./product.html?id=nezhnyy-rassvet">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="hero-week-carousel__slide">
+                      <article class="product card h-100 hero-week-carousel__card">
+                        <div class="product-media">
+                          <a class="product-link" href="./product.html?id=granat-sneg" aria-label="Открыть: Гранатовый снег"
+                            ><div class="product-img product-img--2" role="img" aria-label=""></div
+                          ></a>
+                          <span class="badge text-bg-light border product-badge">Новинка</span>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="h6 fw-semibold mb-1">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=granat-sneg"
+                              >Гранатовый снег</a
+                            >
+                          </h3>
+                          <p class="text-secondary small hero-week-carousel__excerpt mb-2">Тюльпаны, амариллисы.</p>
+                          <div class="d-flex flex-column gap-1">
+                            <div class="fw-bold small">2 490 ₽</div>
+                            <div class="d-flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                data-florista-add
+                                data-florista-id="granat-sneg"
+                              >
+                                В корзину
+                              </button>
+                              <a class="btn btn-light border btn-sm" href="./product.html?id=granat-sneg">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="hero-week-carousel__slide">
+                      <article class="product card h-100 hero-week-carousel__card">
+                        <div class="product-media">
+                          <a class="product-link" href="./product.html?id=lavand-vozduh" aria-label="Открыть: Лавандовый воздух"
+                            ><div class="product-img product-img--3" role="img" aria-label=""></div
+                          ></a>
+                          <span class="badge text-bg-light border product-badge">-10%</span>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="h6 fw-semibold mb-1">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=lavand-vozduh"
+                              >Лавандовый воздух</a
+                            >
+                          </h3>
+                          <p class="text-secondary small hero-week-carousel__excerpt mb-2">Гортензия, розы, лаванда.</p>
+                          <div class="d-flex flex-column gap-1">
+                            <div class="fw-bold small">3 390 ₽</div>
+                            <div class="d-flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                data-florista-add
+                                data-florista-id="lavand-vozduh"
+                              >
+                                В корзину
+                              </button>
+                              <a class="btn btn-light border btn-sm" href="./product.html?id=lavand-vozduh">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="hero-week-carousel__slide">
+                      <article class="product card h-100 hero-week-carousel__card">
+                        <div class="product-media">
+                          <a
+                            class="product-link"
+                            href="./product.html?id=belaya-geometriya"
+                            aria-label="Открыть: Белая геометрия"
+                            ><div class="product-img product-img--4" role="img" aria-label=""></div
+                          ></a>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="h6 fw-semibold mb-1">
+                            <a
+                              class="link-dark link-underline link-underline-opacity-0"
+                              href="./product.html?id=belaya-geometriya"
+                              >Белая геометрия</a
+                            >
+                          </h3>
+                          <p class="text-secondary small hero-week-carousel__excerpt mb-2">Каллы, альстромерия, зелень.</p>
+                          <div class="d-flex flex-column gap-1">
+                            <div class="fw-bold small">2 790 ₽</div>
+                            <div class="d-flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                data-florista-add
+                                data-florista-id="belaya-geometriya"
+                              >
+                                В корзину
+                              </button>
+                              <a class="btn btn-light border btn-sm" href="./product.html?id=belaya-geometriya"
+                                >Подробнее</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="hero-week-carousel__slide">
+                      <article class="product card h-100 hero-week-carousel__card">
+                        <div class="product-media">
+                          <a class="product-link" href="./product.html?id=solnech-vayb" aria-label="Открыть: Солнечный вайб"
+                            ><div class="product-img product-img--5" role="img" aria-label=""></div
+                          ></a>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="h6 fw-semibold mb-1">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=solnech-vayb"
+                              >Солнечный вайб</a
+                            >
+                          </h3>
+                          <p class="text-secondary small hero-week-carousel__excerpt mb-2">Герберы, ромашки, зелень.</p>
+                          <div class="d-flex flex-column gap-1">
+                            <div class="fw-bold small">1 990 ₽</div>
+                            <div class="d-flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                data-florista-add
+                                data-florista-id="solnech-vayb"
+                              >
+                                В корзину
+                              </button>
+                              <a class="btn btn-light border btn-sm" href="./product.html?id=solnech-vayb">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="hero-week-carousel__slide">
+                      <article class="product card h-100 hero-week-carousel__card">
+                        <div class="product-media">
+                          <a class="product-link" href="./product.html?id=nochnoy-sad" aria-label="Открыть: Ночной сад"
+                            ><div class="product-img product-img--6" role="img" aria-label=""></div
+                          ></a>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="h6 fw-semibold mb-1">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=nochnoy-sad"
+                              >Ночной сад</a
+                            >
+                          </h3>
+                          <p class="text-secondary small hero-week-carousel__excerpt mb-2">Темные розы, антуриум.</p>
+                          <div class="d-flex flex-column gap-1">
+                            <div class="fw-bold small">4 490 ₽</div>
+                            <div class="d-flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                data-florista-add
+                                data-florista-id="nochnoy-sad"
+                              >
+                                В корзину
+                              </button>
+                              <a class="btn btn-light border btn-sm" href="./product.html?id=nochnoy-sad">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <span class="chip">
+                  <span class="chip-dot chip-dot--green" aria-hidden="true"></span>
+                  В наличии сегодня
+                </span>
+                <span class="chip">
+                  <span class="chip-dot chip-dot--pink" aria-hidden="true"></span>
+                  Сборка 10–25 минут
+                </span>
+                <span class="chip">
+                  <span class="chip-dot chip-dot--violet" aria-hidden="true"></span>
+                  Упаковка “Soft-touch”
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="py-5">
+        <div class="container">
+          <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
+            <div>
+              <h2 class="h1 fw-bold mb-2">Каталог</h2>
+              <p class="text-secondary mb-0">
+                Структура категорий как на сайте‑прототипе: букеты, композиции, розы, шары и подарки.
+              </p>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-sm btn-light border" href="./section.html?id=sale">Акции</a>
+              <a class="btn btn-sm btn-light border" href="./section.html?id=bouquets">Букеты</a>
+              <a class="btn btn-sm btn-light border" href="./section.html?id=compositions">Композиции</a>
+              <a class="btn btn-sm btn-light border" href="./section.html?id=balloons">Шары</a>
+              <a class="btn btn-sm btn-light border" href="./section.html?id=gifts">Подарки</a>
+            </div>
+          </div>
+
+          <div class="row g-3 g-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="cat card h-100 text-decoration-none" href="./section.html?id=sale">
+                <div class="cat-media cat-media--sale" aria-hidden="true"></div>
+                <div class="card-body">
+                  <div class="fw-semibold">Акции</div>
+                  <div class="text-secondary small">Скидки и спецпредложения</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="cat card h-100 text-decoration-none" href="./section.html?id=roses">
+                <div class="cat-media cat-media--roses" aria-hidden="true"></div>
+                <div class="card-body">
+                  <div class="fw-semibold">Розы</div>
+                  <div class="text-secondary small">Букеты и поштучно</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="cat card h-100 text-decoration-none" href="./section.html?id=bouquets">
+                <div class="cat-media cat-media--bouquets" aria-hidden="true"></div>
+                <div class="card-body">
+                  <div class="fw-semibold">Букеты</div>
+                  <div class="text-secondary small">Сборные, моно и тематические</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="cat card h-100 text-decoration-none" href="./section.html?id=compositions">
+                <div class="cat-media cat-media--comp" aria-hidden="true"></div>
+                <div class="card-body">
+                  <div class="fw-semibold">Композиции</div>
+                  <div class="text-secondary small">Корзины, коробки, сердце</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="cat card h-100 text-decoration-none" href="./section.html?id=balloons">
+                <div class="cat-media cat-media--balloons" aria-hidden="true"></div>
+                <div class="card-body">
+                  <div class="fw-semibold">Воздушные шары</div>
+                  <div class="text-secondary small">Сеты, цифры, праздники</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="cat card h-100 text-decoration-none" href="./section.html?id=gifts">
+                <div class="cat-media cat-media--gifts" aria-hidden="true"></div>
+                <div class="card-body">
+                  <div class="fw-semibold">Подарки</div>
+                  <div class="text-secondary small">Игрушки и сладости</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="sale" class="anchor-offset"></div>
+          <div class="d-flex align-items-end justify-content-between gap-2 flex-wrap mb-3">
+            <div>
+              <h3 class="h3 fw-bold mb-1">Акции</h3>
+              <div class="text-secondary">Примеры карточек товаров (демо).</div>
+            </div>
+            <a class="btn btn-sm btn-light border" href="#catalog">К категориям</a>
+          </div>
+
+          <div class="row g-3 g-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a
+                    class="product-link"
+                    href="./product.html?id=nezhnyy-rassvet"
+                    aria-label="Открыть товар: Нежный рассвет"
+                  >
+                    <div class="product-img product-img--1" role="img" aria-label="Букет Нежный рассвет"></div>
+                  </a>
+                  <span class="badge text-bg-dark product-badge">Хит</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=nezhnyy-rassvet">
+                      Нежный рассвет
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">
+                    Пионы, ранункулюсы, эвкалипт. Мягкая упаковка + лента.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">2 990 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=nezhnyy-rassvet">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="nezhnyy-rassvet">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a
+                    class="product-link"
+                    href="./product.html?id=granat-sneg"
+                    aria-label="Открыть товар: Гранатовый снег"
+                  >
+                    <div class="product-img product-img--2" role="img" aria-label="Букет Гранатовый снег"></div>
+                  </a>
+                  <span class="badge text-bg-light border product-badge">Новинка</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=granat-sneg">
+                      Гранатовый снег
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">
+                    Тюльпаны, амариллисы, сухоцветы. Контраст и графика.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">2 490 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=granat-sneg">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="granat-sneg">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a
+                    class="product-link"
+                    href="./product.html?id=lavand-vozduh"
+                    aria-label="Открыть товар: Лавандовый воздух"
+                  >
+                    <div class="product-img product-img--3" role="img" aria-label="Букет Лавандовый воздух"></div>
+                  </a>
+                  <span class="badge text-bg-light border product-badge">-10%</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=lavand-vozduh">
+                      Лавандовый воздух
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">
+                    Гортензия, розы, лаванда. Подходит для фото и праздников.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">3 390 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=lavand-vozduh">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="lavand-vozduh">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a
+                    class="product-link"
+                    href="./product.html?id=belaya-geometriya"
+                    aria-label="Открыть товар: Белая геометрия"
+                  >
+                    <div class="product-img product-img--4" role="img" aria-label="Букет Белая геометрия"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a
+                      class="link-dark link-underline link-underline-opacity-0"
+                      href="./product.html?id=belaya-geometriya"
+                    >
+                      Белая геометрия
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">
+                    Каллы, альстромерия, зелень. Минимализм и строгий стиль.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">2 790 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=belaya-geometriya">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="belaya-geometriya">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a
+                    class="product-link"
+                    href="./product.html?id=solnech-vayb"
+                    aria-label="Открыть товар: Солнечный вайб"
+                  >
+                    <div class="product-img product-img--5" role="img" aria-label="Букет Солнечный вайб"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=solnech-vayb">
+                      Солнечный вайб
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">
+                    Герберы, ромашки, зелень. Для улыбок и дружеских встреч.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">1 990 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=solnech-vayb">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="solnech-vayb">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a
+                    class="product-link"
+                    href="./product.html?id=nochnoy-sad"
+                    aria-label="Открыть товар: Ночной сад"
+                  >
+                    <div class="product-img product-img--6" role="img" aria-label="Букет Ночной сад"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=nochnoy-sad">
+                      Ночной сад
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">
+                    Темные розы, антуриум, зелень. Премиальный, драматичный.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">4 490 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=nochnoy-sad">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="nochnoy-sad">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <template id="product-card-template">
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="product card h-100">
+                <div class="product-media">
+                  <a class="product-link" href="./product.html?id=product-id" aria-label="Открыть товар">
+                    <div class="product-img" role="img" aria-label="Фото товара"></div>
+                  </a>
+                  <span class="badge text-bg-light border product-badge">Новинка</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 fw-semibold mb-1">
+                    <a class="link-dark link-underline link-underline-opacity-0" href="./product.html?id=product-id">
+                      Название товара
+                    </a>
+                  </h3>
+                  <p class="text-secondary mb-3">Короткое описание: состав, упаковка, повод.</p>
+                  <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="fw-bold fs-5">2 990 ₽</div>
+                    <div class="d-flex gap-2">
+                      <a class="btn btn-light border btn-sm" href="./product.html?id=product-id">Подробнее</a>
+                      <button type="button" class="btn btn-primary btn-sm" data-florista-add data-florista-id="product-id">
+                        В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section id="why" class="py-5 section-soft">
+        <div class="container">
+          <div class="row g-4 align-items-start">
+            <div class="col-12 col-lg-5">
+              <h2 class="h1 fw-bold mb-2">Почему Florista</h2>
+              <p class="text-secondary mb-4">
+                Мы строим сервис вокруг качества и спокойствия: вам не надо переживать за свежесть,
+                упаковку и время доставки.
+              </p>
+              <div class="glass p-3 p-lg-4">
+                <div class="d-flex align-items-center justify-content-between gap-2">
+                  <div>
+                    <div class="fw-semibold">Подписка на цветы</div>
+                    <div class="text-secondary small">Букет каждую неделю / месяц</div>
+                  </div>
+                  <span class="badge text-bg-light border rounded-pill px-3 py-2">от 5 990 ₽</span>
+                </div>
+                <hr class="my-3" />
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge text-bg-light border rounded-pill px-3 py-2">персональный флорист</span>
+                  <span class="badge text-bg-light border rounded-pill px-3 py-2">напоминания</span>
+                  <span class="badge text-bg-light border rounded-pill px-3 py-2">скидка на доп. букеты</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-6">
+                  <div class="feature card h-100">
+                    <div class="card-body">
+                      <div class="feature-icon" aria-hidden="true">⏱</div>
+                      <div class="fw-semibold mb-1">Сборка быстро</div>
+                      <div class="text-secondary">
+                        Флорист начинает сборку сразу после подтверждения. Обычно 10–25 минут.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="feature card h-100">
+                    <div class="card-body">
+                      <div class="feature-icon" aria-hidden="true">📸</div>
+                      <div class="fw-semibold mb-1">Фото до отправки</div>
+                      <div class="text-secondary">
+                        Вы увидите букет и упаковку заранее. Можно попросить заменить цветок.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="feature card h-100">
+                    <div class="card-body">
+                      <div class="feature-icon" aria-hidden="true">🌿</div>
+                      <div class="fw-semibold mb-1">Свежесть гарантируем</div>
+                      <div class="text-secondary">
+                        Хранение в холоде, поставки 5 раз в неделю. Если букет “устал” — заменим.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="feature card h-100">
+                    <div class="card-body">
+                      <div class="feature-icon" aria-hidden="true">🧾</div>
+                      <div class="fw-semibold mb-1">Удобная оплата</div>
+                      <div class="text-secondary">
+                        Онлайн‑оплата, перевод, счёт для компаний. Чек и документы — по запросу.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="delivery" class="py-5">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-6">
+              <h2 class="h1 fw-bold mb-2">Доставка и забота</h2>
+              <p class="text-secondary mb-4">
+                Доставляем бережно: короб‑фиксатор, вода в транспортной колбе, инструкции по уходу.
+              </p>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <div>
+                    <div class="fw-semibold">Вы выбираете букет</div>
+                    <div class="text-secondary">Каталог или короткое описание “что нравится”.</div>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <div>
+                    <div class="fw-semibold">Мы подтверждаем наличие</div>
+                    <div class="text-secondary">При необходимости предложим замены.</div>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <div>
+                    <div class="fw-semibold">Фото и отправка</div>
+                    <div class="text-secondary">Покажем итог и доставим точно ко времени.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 d-flex flex-wrap gap-2">
+                <span class="badge text-bg-light border rounded-pill px-3 py-2">по городу: 0–390 ₽</span>
+                <span class="badge text-bg-light border rounded-pill px-3 py-2">за город: по тарифу</span>
+                <span class="badge text-bg-light border rounded-pill px-3 py-2">самовывоз: −5%</span>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="delivery-card p-4 p-lg-5">
+                <h3 class="h4 fw-bold mb-2">Нужен букет “прямо сейчас”?</h3>
+                <p class="text-secondary mb-4">
+                  Оставьте номер — перезвоним за 3–5 минут, уточним бюджет и повод, предложим 2–3
+                  варианта и пришлём фото.
+                </p>
+                <form class="row g-2">
+                  <div class="col-12 col-md-7">
+                    <label class="visually-hidden" for="phoneFast">Телефон</label>
+                    <input
+                      id="phoneFast"
+                      class="form-control form-control-lg"
+                      placeholder="+7 (___) ___‑__‑__"
+                      inputmode="tel"
+                      autocomplete="tel"
+                    />
+                  </div>
+                  <div class="col-12 col-md-5 d-grid">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                    >
+                      Перезвоните мне
+                    </button>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-text text-secondary">
+                      Нажимая кнопку, вы соглашаетесь на обработку данных. Это демо‑форма без отправки.
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="py-5 section-soft">
+        <div class="container">
+          <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
+            <div>
+              <h2 class="h1 fw-bold mb-2">Отзывы</h2>
+              <p class="text-secondary mb-0">Живые впечатления клиентов. Средняя оценка 4.9.</p>
+            </div>
+            <div class="rating-pill">
+              <span class="fw-semibold">4.9</span>
+              <span class="text-secondary">/ 5</span>
+              <span class="mx-2 text-secondary">•</span>
+              <span class="text-secondary">1 240 отзывов</span>
+            </div>
+          </div>
+
+          <div class="row g-3 g-lg-4">
+            <div class="col-12 col-lg-4">
+              <div class="review card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div>
+                      <div class="fw-semibold">Мария</div>
+                      <div class="text-secondary small">Доставка в офис</div>
+                    </div>
+                    <div class="stars" aria-label="5 из 5">★★★★★</div>
+                  </div>
+                  <p class="text-secondary mt-3 mb-0">
+                    Очень стильный букет, упаковка премиальная. Прислали фото, всё согласовали —
+                    приехало вовремя.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="review card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div>
+                      <div class="fw-semibold">Алексей</div>
+                      <div class="text-secondary small">Сюрприз</div>
+                    </div>
+                    <div class="stars" aria-label="5 из 5">★★★★★</div>
+                  </div>
+                  <p class="text-secondary mt-3 mb-0">
+                    Заказал “Ночной сад” — вау. Цветы свежие, курьер вежливый, всё как на фото.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="review card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div>
+                      <div class="fw-semibold">Екатерина</div>
+                      <div class="text-secondary small">Подписка</div>
+                    </div>
+                    <div class="stars" aria-label="5 из 5">★★★★★</div>
+                  </div>
+                  <p class="text-secondary mt-3 mb-0">
+                    Оформила подписку — каждую неделю новый букет. Всегда свежо и очень красиво дома.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <h2 class="h1 fw-bold mb-2">Контакты</h2>
+              <p class="text-secondary mb-4">
+                Работаем ежедневно 09:00–21:00. Поддержка в мессенджерах и по телефону.
+              </p>
+
+              <div class="contact-grid">
+                <div class="contact-item">
+                  <div class="text-secondary small">Телефон</div>
+                  <a class="link-underline link-underline-opacity-0 fw-semibold" href="tel:+79234577136">
+                    +7 (923) 457 71 36
+                  </a>
+                </div>
+                <div class="contact-item">
+                  <div class="text-secondary small">Почта</div>
+                  <a class="link-underline link-underline-opacity-0 fw-semibold" href="mailto:info@florista.tomsk.ru">
+                    info@florista.tomsk.ru
+                  </a>
+                </div>
+                <div class="contact-item">
+                  <div class="text-secondary small">Адрес</div>
+                  <div class="fw-semibold">Томск, Иркутский проезд, 1</div>
+                </div>
+                <div class="contact-item">
+                  <div class="text-secondary small">Соцсети</div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <a class="btn btn-sm btn-light border" href="#" aria-label="Telegram">Telegram</a>
+                    <a class="btn btn-sm btn-light border" href="#" aria-label="VK">VK</a>
+                    <a class="btn btn-sm btn-light border" href="#" aria-label="Instagram">Instagram</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="map-mock h-100 p-3 p-lg-3">
+                <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+                  <div>
+                    <div class="fw-semibold">Мы на карте</div>
+                    <div class="text-secondary small">Яндекс.Карты (профиль организации)</div>
+                  </div>
+                  <a
+                    class="btn btn-sm btn-light border"
+                    href="https://yandex.ru/profile/78906546716?lang=ru"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Открыть в Яндексе
+                  </a>
+                </div>
+
+                <div class="ratio ratio-16x9 map-embed">
+                  <iframe
+                    title="Florista на Яндекс.Картах"
+                    src="https://yandex.ru/map-widget/v1/?z=16&ol=biz&oid=78906546716"
+                    allowfullscreen="true"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 border-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="text-secondary small">
+            © <span id="year">2026</span> Florista. Демо‑сайт на HTML + CSS + Bootstrap.
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="link-secondary link-underline link-underline-opacity-0" href="#catalog">Каталог</a>
+            <a class="link-secondary link-underline link-underline-opacity-0" href="#delivery">Доставка</a>
+            <a class="link-secondary link-underline link-underline-opacity-0" href="#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрый заказ</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="orderName">Имя</label>
+                <input id="orderName" class="form-control" placeholder="Как к вам обращаться?" autocomplete="name" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderPhone">Телефон</label>
+                <input
+                  id="orderPhone"
+                  class="form-control"
+                  placeholder="+7 (___) ___‑__‑__"
+                  inputmode="tel"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderBudget">Бюджет</label>
+                <select id="orderBudget" class="form-select">
+                  <option selected>2 000–3 000 ₽</option>
+                  <option>3 000–5 000 ₽</option>
+                  <option>5 000–8 000 ₽</option>
+                  <option>8 000 ₽+</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderNote">Пожелания</label>
+                <textarea
+                  id="orderNote"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Повод, любимые цвета, что точно не добавлять…"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-text text-secondary">
+                  Форма демонстрационная, отправка не настроена. Можно подключить backend или Telegram‑бота.
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Отмена</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./roses-data.js"></script>
+    <script src="./bouquets-data.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      (function () {
+        const root = document.querySelector(".hero-week-carousel");
+        if (!root) return;
+        const el = document.getElementById("heroWeekCarousel");
+        const prevBtn = root.querySelector("[data-hero-week-arrow=\"prev\"]");
+        const nextBtn = root.querySelector("[data-hero-week-arrow=\"next\"]");
+        if (!el) return;
+        const delta = function () {
+          return Math.max(1, el.clientWidth);
+        };
+        const goPrev = function () {
+          el.scrollBy({ left: -delta(), behavior: "smooth" });
+        };
+        const goNext = function () {
+          el.scrollBy({ left: delta(), behavior: "smooth" });
+        };
+        const updateNav = function () {
+          const sl = el.scrollLeft;
+          const max = el.scrollWidth - el.clientWidth;
+          const e = 2;
+          if (prevBtn) {
+            const dis = sl <= e;
+            prevBtn.disabled = dis;
+            prevBtn.setAttribute("aria-disabled", dis ? "true" : "false");
+          }
+          if (nextBtn) {
+            const dis = sl >= max - e;
+            nextBtn.disabled = dis;
+            nextBtn.setAttribute("aria-disabled", dis ? "true" : "false");
+          }
+        };
+        if (prevBtn) prevBtn.addEventListener("click", goPrev);
+        if (nextBtn) nextBtn.addEventListener("click", goNext);
+        el.addEventListener("scroll", updateNav, { passive: true });
+        window.addEventListener("resize", updateNav, { passive: true });
+        el.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            goPrev();
+          } else if (e.key === "ArrowRight") {
+            e.preventDefault();
+            goNext();
+          }
+        });
+        requestAnimationFrame(updateNav);
+      })();
+    </script>
+  </body>
+</html>

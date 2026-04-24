@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Раздел каталога — Florista: букеты и композиции, доставка в Томске."
+    />
+    <title>Раздел — Florista</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="sticky-top header-blur border-bottom">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-2">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+            <img
+              class="brand-logo"
+              src="./assets/logo21.png"
+              width="36"
+              height="36"
+              alt="Florista"
+              loading="eager"
+              decoding="async"
+            />
+            <span class="fw-bold">Florista</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMain"
+            aria-controls="navMain"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="./index.html#catalog"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Каталог
+                </a>
+                <div class="dropdown-menu dropdown-menu-end p-2 catalog-menu">
+                  <div class="catalog-mega" role="menu">
+                    <div class="catalog-mega-left" aria-label="Разделы каталога">
+                      <a class="dropdown-item catalog-top" href="./section.html?id=sale">Акции</a>
+                      <a class="dropdown-item catalog-top" href="./section.html?id=roses">Розы</a>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=bouquets">Букеты</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Букеты">
+                          <h6 class="dropdown-header">Букеты</h6>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-mixed">Сборные букеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-mono">Монобукеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-compliments">Комплименты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-exclusive">Эксклюзивные букеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-durable">Букеты из стойких цветов</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-roses">Букеты с розами</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-chrysanthemum">Букеты с хризантемой</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-alstroemeria">Букеты с альстромерией</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-peonies">Букеты с пионами</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-orchid">Букеты с орхидеей</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-hydrangea">Букеты с гортензией</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-gypsophila">Букеты с гипсофилой</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-tulips">Букеты с тюльпанами</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=compositions">Композиции</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Композиции">
+                          <h6 class="dropdown-header">Композиции</h6>
+                          <a class="dropdown-item" href="./section.html?id=comp-roses">Композиции из роз</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-mixed">Сборные композиции</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-baskets">Корзины с цветами</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-hatboxes">Композиции в шляпной коробке</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-heart">Композиции в сердце</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-boxes">Коробки и сумочки с цветами</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=balloons">Воздушные шары</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Воздушные шары">
+                          <h6 class="dropdown-header">Воздушные шары</h6>
+                          <a class="dropdown-item" href="./section.html?id=bal-foil">Фольгированные</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-latex">Латексные</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-men">Шары для мужчины</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-girl">Шары для девушки</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-birthday">Шары на день рождения</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-maternity">Выписка из роддома</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-box">Коробка с шарами</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-piece">Поштучно</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-sets">Сеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-stars">Звезды</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-numbers">Цифры</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-14feb">Шары на 14 февраля</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-23feb">Шары на 23 февраля</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-wedding">Шары на свадьбу</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-graduation">Шары на выпускной</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-kindergarten">Шары в детский сад</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-8mar">Шары на 8 марта</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-mothersday">Шары на день матери</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-anniversary">Шары на юбилей</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-newyear">Шары на Новый год</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-1sep">Шары на 1 сентября</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=gifts">Подарки</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Подарки">
+                          <h6 class="dropdown-header">Подарки</h6>
+                          <a class="dropdown-item" href="./section.html?id=gifts-toys">Игрушки</a>
+                          <a class="dropdown-item" href="./section.html?id=gifts-sweets">Конфеты и сладкие подарки</a>
+                          <a class="dropdown-item" href="./section.html?id=gifts-balloons">Воздушные шары к букету</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-mega-hint text-secondary small">
+                      Наведите курсор на раздел, чтобы увидеть подразделы.
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#why">Почему мы</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#delivery">Доставка</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#reviews">Отзывы</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#contacts">Контакты</a></li>
+              <li class="nav-item py-1 py-lg-0 dropdown" id="floristaNavCart">
+                <button
+                  type="button"
+                  class="btn position-relative p-2 rounded-3 d-flex align-items-center justify-content-center text-body bg-transparent border-0"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                  aria-label="Корзина. Товаров: 0"
+                  id="floristaCartBtn"
+                >
+                  <span class="florista-cart-ico" aria-hidden="true">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 8V6C9 4.34 10.34 3 12 3C13.66 3 15 4.34 15 6V8"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M5 8.5H19L20 21H4L5 8.5Z"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary florista-cart-badge"
+                    id="floristaCartCount"
+                    style="min-width: 1rem; font-size: 0.6rem; padding: 0.2rem 0.4rem"
+                    hidden
+                    >0</span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-end p-0 mini-cart"
+                  aria-label="Содержимое корзины"
+                  style="min-width: min(100vw - 2rem, 380px)"
+                >
+                  <div class="p-3 border-bottom d-flex align-items-center justify-content-between gap-2">
+                    <span class="fw-bold">Корзина</span>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-link text-secondary text-decoration-none p-0"
+                      id="floristaCartClear"
+                    >
+                      Очистить
+                    </button>
+                  </div>
+                  <div class="mini-cart__body" id="floristaCartList"></div>
+                  <p class="mini-cart__empty p-3 mb-0 text-center text-secondary small" id="floristaCartEmpty">
+                    Корзина пуста. Добавьте букет из каталога.
+                  </p>
+                  <div class="p-3 border-top" id="floristaCartFooter" hidden>
+                    <div class="d-flex justify-content-between align-items-baseline mb-2">
+                      <span class="text-secondary">Итого</span>
+                      <span class="fw-bold fs-5" id="floristaCartTotal">0 ₽</span>
+                    </div>
+                    <a class="btn btn-primary w-100" id="floristaCartCheckout" href="./checkout.html"
+                      >Оформить заказ</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <button
+                  class="btn btn-primary btn-sm px-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="section-page-main">
+      <div class="section-soft border-bottom">
+        <div class="container py-4 py-lg-5">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb small mb-0">
+              <li class="breadcrumb-item"><a class="link-secondary" href="./index.html">Главная</a></li>
+              <li class="breadcrumb-item">
+                <a class="link-secondary" href="./index.html#catalog">Каталог</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page" id="sectionCrumb">Раздел</li>
+            </ol>
+          </nav>
+
+          <div class="row g-4 g-lg-5 align-items-stretch">
+            <div class="col-12 col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-3" id="sectionBadges"></div>
+              <h1 class="h1 fw-bold lh-sm mb-3" id="sectionTitle">
+                Раздел каталога
+              </h1>
+              <p class="lead text-secondary mb-0" id="sectionLead">
+                Краткое описание раздела и товаров — подставляется в шаблоне автоматически.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mt-4" id="sectionSublinks" hidden></div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div
+                class="h-100 glass p-0 overflow-hidden d-flex flex-column"
+                id="sectionVisual"
+                style="min-height: 12rem"
+              >
+                <div
+                  class="section-page-visual flex-grow-1 cat-media cat-media--sale"
+                  id="sectionMedia"
+                  aria-hidden="true"
+                ></div>
+                <div class="p-3 p-lg-3 border-top small text-secondary" id="sectionMediaHint">
+                  Сезон и наличие уточняйте в чате — при необходимости подберём замену.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-4 py-lg-5">
+        <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-3">
+          <div>
+            <h2 class="h3 fw-bold mb-1" id="sectionListTitle">Товары</h2>
+            <p class="text-secondary mb-0" id="sectionListLead">Актуальные позиции в разделе.</p>
+          </div>
+          <a class="btn btn-sm btn-light border" id="sectionBack" href="./index.html#catalog">
+            К категориям
+          </a>
+        </div>
+
+        <div class="row g-3 g-lg-4" id="sectionProductGrid" aria-live="polite"></div>
+
+        <nav
+          class="section-catalog-nav d-flex flex-wrap align-items-center justify-content-between gap-2 gap-md-3"
+          id="sectionCatalogNav"
+          aria-label="Постраничный просмотр каталога"
+          hidden
+        >
+          <p class="section-catalog-nav__range mb-0" id="sectionCatalogRange" aria-live="polite"></p>
+          <ul class="section-catalog-pagination mb-0" id="sectionCatalogPages" role="list"></ul>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="py-4 border-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="text-secondary small">
+            © <span id="year">2026</span> Florista. Раздел каталога.
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="link-secondary link-underline link-underline-opacity-0" href="./index.html#catalog">Каталог</a>
+            <a class="link-secondary link-underline link-underline-opacity-0" href="./index.html#delivery"
+              >Доставка</a
+            >
+            <a class="link-secondary link-underline link-underline-opacity-0" href="./index.html#contacts"
+              >Контакты</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрый заказ</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="orderName">Имя</label>
+                <input id="orderName" class="form-control" placeholder="Как к вам обращаться?" autocomplete="name" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderPhone">Телефон</label>
+                <input
+                  id="orderPhone"
+                  class="form-control"
+                  placeholder="+7 (___) ___‑__‑__"
+                  inputmode="tel"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderNote">Пожелания</label>
+                <textarea
+                  id="orderNote"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Повод, любимые цвета, что точно не добавлять…"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-text text-secondary">
+                  Форма демонстрационная, отправка не настроена.
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Отмена</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./roses-data.js"></script>
+    <script src="./bouquets-data.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      const products = {
+        "nezhnyy-rassvet": {
+          name: "Нежный рассвет",
+          price: "2 990 ₽",
+          desc: "Пионы, ранункулюсы, эвкалипт. Мягкая упаковка + лента.",
+          badge: "Хит",
+          badgeClass: "text-bg-dark",
+          img: 1,
+        },
+        "granat-sneg": {
+          name: "Гранатовый снег",
+          price: "2 490 ₽",
+          desc: "Тюльпаны, амариллисы, сухоцветы. Контраст и графика.",
+          badge: "Новинка",
+          badgeClass: "text-bg-light border",
+          img: 2,
+        },
+        "lavand-vozduh": {
+          name: "Лавандовый воздух",
+          price: "3 390 ₽",
+          desc: "Гортензия, розы, лаванда. Подходит для фото и праздников.",
+          badge: "-10%",
+          badgeClass: "text-bg-light border",
+          img: 3,
+        },
+        "belaya-geometriya": {
+          name: "Белая геометрия",
+          price: "2 790 ₽",
+          desc: "Каллы, альстромерия, зелень. Минимализм и строгий стиль.",
+          badge: null,
+          img: 4,
+        },
+        "solnech-vayb": {
+          name: "Солнечный вайб",
+          price: "1 990 ₽",
+          desc: "Герберы, ромашки, зелень. Для улыбок и дружеских встреч.",
+          badge: null,
+          img: 5,
+        },
+        "nochnoy-sad": {
+          name: "Ночной сад",
+          price: "4 490 ₽",
+          desc: "Темные розы, антуриум, зелень. Премиальный, драматичный.",
+          badge: "Премиум",
+          badgeClass: "text-bg-light border",
+          img: 6,
+        },
+        ...(typeof window.FLORISTA_ROSE_PRODUCTS === "object" && window.FLORISTA_ROSE_PRODUCTS
+          ? window.FLORISTA_ROSE_PRODUCTS
+          : {}),
+        ...(typeof window.FLORISTA_BOUQUET_PRODUCTS === "object" && window.FLORISTA_BOUQUET_PRODUCTS
+          ? window.FLORISTA_BOUQUET_PRODUCTS
+          : {}),
+      };
+
+      const parentBySub = {
+        bouquets: {
+          mediaClass: "cat-media--bouquets",
+          groupId: "bouquets",
+          groupLabel: "Все букеты",
+          badges: ["Упаковка в подарок", "Лента 0 ₽", "Открытка 0 ₽"],
+          productIds: [
+            "nezhnyy-rassvet",
+            "granat-sneg",
+            "lavand-vozduh",
+            "belaya-geometriya",
+            "solnech-vayb",
+            "nochnoy-sad",
+          ],
+        },
+        compositions: {
+          mediaClass: "cat-media--comp",
+          groupId: "compositions",
+          groupLabel: "Все композиции",
+          badges: ["Стабильная фиксация", "Презентабельно у двери"],
+          productIds: ["belaya-geometriya", "nezhnyy-rassvet", "nochnoy-sad", "lavand-vozduh"],
+        },
+        balloons: {
+          mediaClass: "cat-media--balloons",
+          groupId: "balloons",
+          groupLabel: "Все шары",
+          badges: ["Согласуем с букетом", "Крепление + проверка на месте"],
+          productIds: ["solnech-vayb", "granat-sneg", "lavand-vozduh"],
+        },
+        gifts: {
+          mediaClass: "cat-media--gifts",
+          groupId: "gifts",
+          groupLabel: "Подарки (группа)",
+          badges: ["К букету одним сетом", "Упакуем вместе"],
+          productIds: ["solnech-vayb", "nezhnyy-rassvet", "belaya-geometriya", "lavand-vozduh"],
+        },
+      };
+
+      /** id|parentKey|заголовок[|id товаров через запятую] */
+      const subSectionLines = [
+        "bouquets-mixed|bouquets|Сборные букеты",
+        "bouquets-mono|bouquets|Монобукеты",
+        "bouquets-compliments|bouquets|Комплименты",
+        "bouquets-exclusive|bouquets|Эксклюзивные букеты",
+        "bouquets-durable|bouquets|Букеты из стойких цветов",
+        "bouquets-roses|bouquets|Букеты с розами|lavand-vozduh,nochnoy-sad,nezhnyy-rassvet,belaya-geometriya",
+        "bouquets-chrysanthemum|bouquets|Букеты с хризантемой",
+        "bouquets-alstroemeria|bouquets|Букеты с альстромерией",
+        "bouquets-peonies|bouquets|Букеты с пионами|nezhnyy-rassvet,granat-sneg,lavand-vozduh",
+        "bouquets-orchid|bouquets|Букеты с орхидеей",
+        "bouquets-hydrangea|bouquets|Букеты с гортензией|lavand-vozduh,nezhnyy-rassvet,belaya-geometriya",
+        "bouquets-gypsophila|bouquets|Букеты с гипсофилой",
+        "bouquets-tulips|bouquets|Букеты с тюльпанами|granat-sneg,solnech-vayb,lavand-vozduh",
+        "comp-roses|compositions|Композиции из роз|lavand-vozduh,nochnoy-sad,nezhnyy-rassvet",
+        "comp-mixed|compositions|Сборные композиции",
+        "comp-baskets|compositions|Корзины с цветами",
+        "comp-hatboxes|compositions|Композиции в шляпной коробке|belaya-geometriya,nezhnyy-rassvet,granat-sneg",
+        "comp-heart|compositions|Композиции в сердце|nezhnyy-rassvet,granat-sneg,lavand-vozduh",
+        "comp-boxes|compositions|Коробки и сумочки с цветами|belaya-geometriya,nochnoy-sad,nezhnyy-rassvet",
+        "bal-foil|balloons|Фольгированные",
+        "bal-latex|balloons|Латексные",
+        "bal-men|balloons|Шары для мужчины",
+        "bal-girl|balloons|Шары для девушки",
+        "bal-birthday|balloons|Шары на день рождения",
+        "bal-maternity|balloons|Выписка из роддома|solnech-vayb,granat-sneg",
+        "bal-box|balloons|Коробка с шарами|granat-sneg,nezhnyy-rassvet",
+        "bal-piece|balloons|Поштучно|solnech-vayb,granat-sneg",
+        "bal-sets|balloons|Сеты|solnech-vayb,granat-sneg,lavand-vozduh",
+        "bal-stars|balloons|Звезды",
+        "bal-numbers|balloons|Цифры|solnech-vayb,lavand-vozduh,granat-sneg",
+        "bal-14feb|balloons|Шары на 14 февраля",
+        "bal-23feb|balloons|Шары на 23 февраля|granat-sneg,nezhnyy-rassvet",
+        "bal-wedding|balloons|Шары на свадьбу|belaya-geometriya,nezhnyy-rassvet,lavand-vozduh",
+        "bal-graduation|balloons|Шары на выпускной",
+        "bal-kindergarten|balloons|Шары в детский сад|solnech-vayb,nezhnyy-rassvet,granat-sneg",
+        "bal-8mar|balloons|Шары на 8 марта|nezhnyy-rassvet,granat-sneg,solnech-vayb",
+        "bal-mothersday|balloons|Шары на день матери|lavand-vozduh,nezhnyy-rassvet,granat-sneg",
+        "bal-anniversary|balloons|Шары на юбилей|belaya-geometriya,nezhnyy-rassvet,nochnoy-sad",
+        "bal-newyear|balloons|Шары на Новый год|granat-sneg,solnech-vayb,belaya-geometriya",
+        "bal-1sep|balloons|Шары на 1 сентября|belaya-geometriya,granat-sneg",
+        "gifts-toys|gifts|Игрушки|nezhnyy-rassvet,granat-sneg,solnech-vayb,nochnoy-sad",
+        "gifts-sweets|gifts|Конфеты и сладкие подарки|belaya-geometriya,nezhnyy-rassvet,granat-sneg",
+        "gifts-balloons|gifts|Воздушные шары к букету|solnech-vayb,granat-sneg,lavand-vozduh,nezhnyy-rassvet",
+      ];
+
+      function parseSubSectionLines() {
+        const o = {};
+        for (const line of subSectionLines) {
+          const p = line.split("|");
+          const id = p[0];
+          const pkey = p[1];
+          const title = p[2];
+          const th = parentBySub[pkey];
+          const productIds = p[3]
+            ? p[3].split(",").map((x) => x.trim()).filter(Boolean)
+            : th.productIds;
+          const lead =
+            "Раздел «" +
+            title +
+            "»: витрина в стиле Florista, состав согласуем при заказе (сезон, наличие, бюджет).";
+          o[id] = {
+            title: title,
+            lead: lead,
+            listTitle: title,
+            listLead: "Демо‑карточки и цены; точный состав — в деталях товара и у флориста.",
+            backHref: "./section.html?id=" + th.groupId,
+            meta: title + " — Florista, доставка букетов в Томске.",
+            mediaClass: th.mediaClass,
+            badges: th.badges,
+            sublinks: [
+              { label: th.groupLabel, href: "./section.html?id=" + th.groupId },
+              { label: "Оглавление на главной", href: "./index.html#catalog" },
+            ],
+            productIds: productIds,
+          };
+        }
+        return o;
+      }
+
+      const rootSections = {
+        sale: {
+          title: "Акции",
+          lead: "Скидки и спецпредложения. Ниже — демо‑карточки из макета главной.",
+          listTitle: "Скидки и хиты",
+          listLead: "Популярные позиции, которые чаще всего заказывают в рамках акций.",
+          backHref: "./index.html#catalog",
+          meta: "Акции — Florista: скидки и спецпредложения на букеты в Томске.",
+          mediaClass: "cat-media--sale",
+          badges: ["Сезон 2026", "Фото перед отправкой", "Свежий состав"],
+          sublinks: [
+            { label: "Сборные букеты", href: "./section.html?id=bouquets-mixed" },
+            { label: "Композиции", href: "./section.html?id=comp-mixed" },
+            { label: "Розы", href: "./section.html?id=roses" },
+          ],
+          productIds: [
+            "nezhnyy-rassvet",
+            "granat-sneg",
+            "lavand-vozduh",
+            "belaya-geometriya",
+            "solnech-vayb",
+            "nochnoy-sad",
+          ],
+        },
+        roses: {
+          title: "Розы",
+          lead:
+            "Поштучно и букеты. Ассортимент ниже соответствует витрине на florista.tomsk.ru/roses; остаток и состав уточняйте в заказе.",
+          listTitle: "Розы в каталоге",
+          listLead: "17 позиций: цены и миниатюры как на сайте магазина в Томске.",
+          backHref: "./index.html#roses",
+          meta: "Розы с доставкой в Томске — Florista, каталог как на florista.tomsk.ru/roses.",
+          mediaClass: "cat-media--roses",
+          badges: ["Кения / Эквадор", "Сайт-источник: florista.tomsk.ru"],
+          sublinks: [
+            { label: "Букеты с розами", href: "./section.html?id=bouquets-roses" },
+            { label: "Акции", href: "./section.html?id=sale" },
+            { label: "Каталог на live-сайте", href: "https://florista.tomsk.ru/roses" },
+          ],
+          productIds: [
+            "lavand-vozduh",
+            "nochnoy-sad",
+            "nezhnyy-rassvet",
+            "belaya-geometriya",
+          ],
+        },
+        bouquets: {
+          title: "Букеты",
+          lead: "Сборные и тематические букеты. Варианты под праздник, свидание и «просто так».",
+          listTitle: "Букеты",
+          listLead: "Сборка 10–25 минут, состав можно слегка подстроить по сезону.",
+          backHref: "./index.html#catalog",
+          meta: "Букеты — Florista: сборные, моно и комплименты, доставка в Томске.",
+          mediaClass: "cat-media--bouquets",
+          badges: ["Упаковка в подарок", "Лента 0 ₽", "Открытка 0 ₽"],
+          sublinks: [
+            { label: "Сборные", href: "./section.html?id=bouquets-mixed" },
+            { label: "Моно", href: "./section.html?id=bouquets-mono" },
+            { label: "Комплименты", href: "./section.html?id=bouquets-compliments" },
+            { label: "С пионами", href: "./section.html?id=bouquets-peonies" },
+          ],
+          productIds: parentBySub.bouquets.productIds,
+        },
+        compositions: {
+          title: "Композиции",
+          lead: "Корзины, коробки, сердца — на стол и для фотосессии, с аккуратной фиксацией.",
+          listTitle: "Композиции",
+          listLead: "Стабильные формы и презентабельный вид при доставке курьером.",
+          backHref: "./index.html#catalog",
+          meta: "Композиции в коробках и корзинах — Florista, Томск.",
+          mediaClass: "cat-media--comp",
+          badges: ["В корзине/коробке", "Упаковка + уход в комплекте"],
+          sublinks: [
+            { label: "В шляпной коробке", href: "./section.html?id=comp-hatboxes" },
+            { label: "Сборные", href: "./section.html?id=comp-mixed" },
+            { label: "Корзины", href: "./section.html?id=comp-baskets" },
+          ],
+          productIds: parentBySub.compositions.productIds,
+        },
+        balloons: {
+          title: "Воздушные шары",
+          lead: "Сеты, цифры, герлянды — согласуем палитру с букетом или праздничным сетом.",
+          listTitle: "Шары и сеты (демо)",
+          listLead: "Главный каталог — на витрине, здесь ссылка на логичные букетные пары.",
+          backHref: "./index.html#catalog",
+          meta: "Воздушные шары — Florista, сеты и оформление, Томск.",
+          mediaClass: "cat-media--balloons",
+          badges: ["Согласуем с букетом", "Безопасное крепление"],
+          sublinks: [
+            { label: "Сеты", href: "./section.html?id=bal-sets" },
+            { label: "Цифры", href: "./section.html?id=bal-numbers" },
+            { label: "Свадьба", href: "./section.html?id=bal-wedding" },
+          ],
+          productIds: parentBySub.balloons.productIds,
+        },
+        gifts: {
+          title: "Подарки",
+          lead: "Плюш, сладкое и шарики к букету — чтобы дарить одним сетом.",
+          listTitle: "Сопутствие к заказу",
+          listLead: "Демо: как товары смотрятся в общей витрине рядом с цветами.",
+          backHref: "./index.html#catalog",
+          meta: "Подарки к букету — Florista, Томск.",
+          mediaClass: "cat-media--gifts",
+          badges: ["Можно добавить в заказ", "Упакуем вместе"],
+          sublinks: [
+            { label: "Игрушки", href: "./section.html?id=gifts-toys" },
+            { label: "Сладости", href: "./section.html?id=gifts-sweets" },
+            { label: "Шары к букету", href: "./section.html?id=gifts-balloons" },
+          ],
+          productIds: parentBySub.gifts.productIds,
+        },
+      };
+
+      if (typeof window.FLORISTA_ROSE_PRODUCTS === "object" && window.FLORISTA_ROSE_PRODUCTS) {
+        const rkeys = Object.keys(window.FLORISTA_ROSE_PRODUCTS);
+        if (rkeys.length) {
+          rootSections.roses.productIds = rkeys;
+        }
+      }
+
+      const sections = Object.assign({}, rootSections, parseSubSectionLines());
+
+      if (
+        typeof window.FLORISTA_BOUQUET_ID_LISTS === "object" &&
+        window.FLORISTA_BOUQUET_ID_LISTS &&
+        typeof window.FLORISTA_BOUQUET_PRODUCTS === "object" &&
+        window.FLORISTA_BOUQUET_PRODUCTS
+      ) {
+        const L = window.FLORISTA_BOUQUET_ID_LISTS;
+        if (L.all && L.all.length) {
+          sections.bouquets.productIds = L.all;
+          sections.bouquets.lead =
+            "Карточки с первой страницы витрины https://florista.tomsk.ru/bouquets; полный список и пагинация — на live-сайте магазина.";
+          sections.bouquets.listLead = "19 позиций (первая страница категории, как в выгрузке с сайта).";
+          if (Array.isArray(sections.bouquets.sublinks)) {
+            sections.bouquets.sublinks.unshift({
+              label: "Каталог букетов (live)",
+              href: "https://florista.tomsk.ru/bouquets",
+            });
+          }
+        }
+        if (L.roses && L.roses.length && sections["bouquets-roses"]) {
+          sections["bouquets-roses"].productIds = L.roses;
+          sections["bouquets-roses"].lead =
+            "Соответствует витрине https://florista.tomsk.ru/bouquets_of_roses (1-я стр.); остаток и состав — по согласованию.";
+          sections["bouquets-roses"].listLead = "19 букетов с первой страницы раздела «Букеты из роз».";
+          sections["bouquets-roses"].sublinks = [
+            { label: "На live-сайте (розы)", href: "https://florista.tomsk.ru/bouquets_of_roses" },
+            ...(Array.isArray(sections["bouquets-roses"].sublinks) ? sections["bouquets-roses"].sublinks : []),
+          ];
+        }
+        if (L.chrys && L.chrys.length && sections["bouquets-chrysanthemum"]) {
+          sections["bouquets-chrysanthemum"].productIds = L.chrys;
+          sections["bouquets-chrysanthemum"].lead =
+            "Соответствует витрине https://florista.tomsk.ru/Bouquets_of_flowers (хризантемы, 1-я стр.).";
+          sections["bouquets-chrysanthemum"].listLead = "12 позиций, как в категории на сайте Florista.";
+          sections["bouquets-chrysanthemum"].sublinks = [
+            {
+              label: "На live-сайте (хризантемы)",
+              href: "https://florista.tomsk.ru/Bouquets_of_flowers",
+            },
+            ...(Array.isArray(sections["bouquets-chrysanthemum"].sublinks)
+              ? sections["bouquets-chrysanthemum"].sublinks
+              : []),
+          ];
+        }
+        if (L.mixed && L.mixed.length && sections["bouquets-mixed"]) {
+          sections["bouquets-mixed"].productIds = L.mixed;
+          sections["bouquets-mixed"].lead =
+            "Соответствует витрине https://florista.tomsk.ru/mixed-bouquet (сборные, 1-я стр.).";
+          sections["bouquets-mixed"].listLead = "19 букетов с первой страницы «Сборные букеты».";
+          sections["bouquets-mixed"].sublinks = [
+            { label: "На live-сайте (сборные)", href: "https://florista.tomsk.ru/mixed-bouquet" },
+            ...(Array.isArray(sections["bouquets-mixed"].sublinks) ? sections["bouquets-mixed"].sublinks : []),
+          ];
+        }
+      }
+
+      const defaultSectionId = "sale";
+      const CATALOG_PER_PAGE = 10;
+
+      function catalogPageHref(sectionId, pageNum) {
+        const q = encodeURIComponent(sectionId);
+        if (pageNum <= 1) return "./section.html?id=" + q;
+        return "./section.html?id=" + q + "&page=" + String(pageNum);
+      }
+
+      function buildCatalogPagination(sectionId, page, perPage, totalItems) {
+        const nav = document.getElementById("sectionCatalogNav");
+        const rangeEl = document.getElementById("sectionCatalogRange");
+        const pagesEl = document.getElementById("sectionCatalogPages");
+        if (!nav || !rangeEl || !pagesEl) return;
+
+        const totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+        if (totalItems === 0) {
+          rangeEl.textContent = "В этом разделе пока нет товаров для отображения.";
+          pagesEl.innerHTML = "";
+          nav.setAttribute("hidden", "");
+          return;
+        }
+        if (totalPages <= 1) {
+          rangeEl.textContent =
+            totalItems === 1
+              ? "Показан 1 товар."
+              : "Показаны все " + String(totalItems) + " " + pluralTovarov(totalItems) + ".";
+          pagesEl.innerHTML = "";
+          nav.setAttribute("hidden", "");
+          return;
+        }
+
+        nav.removeAttribute("hidden");
+        const from = (page - 1) * perPage + 1;
+        const to = Math.min(page * perPage, totalItems);
+        rangeEl.textContent =
+          "Показаны " + String(from) + "–" + String(to) + " из " + String(totalItems) + " " + pluralTovarov(totalItems) + ".";
+
+        const items = [];
+        const prevDis = page <= 1;
+        const nextDis = page >= totalPages;
+        items.push(
+          '<li class="page-item' + (prevDis ? " disabled" : "") + '">' +
+            (prevDis
+              ? '<span class="page-link">Предыдущая</span>'
+              : '<a class="page-link" href="' + escapeAttr(catalogPageHref(sectionId, page - 1)) + '">Предыдущая</a>') +
+            "</li>",
+        );
+        const pageNumbers =
+          totalPages > 9
+            ? (function () {
+                const s = new Set(
+                  [1, totalPages, page, page - 1, page + 1].filter(function (x) {
+                    return x >= 1 && x <= totalPages;
+                  }),
+                );
+                return [...s].sort(function (a, b) {
+                  return a - b;
+                });
+              })()
+            : Array.from({ length: totalPages }, function (_, i) {
+                return i + 1;
+              });
+        let lastShown = 0;
+        for (const p of pageNumbers) {
+          if (p - lastShown > 1) {
+            items.push('<li class="page-item disabled" aria-hidden="true"><span class="page-link">&hellip;</span></li>');
+          }
+          lastShown = p;
+          if (p === page) {
+            items.push(
+              '<li class="page-item active" aria-current="page"><span class="page-link">' + String(p) + "</span></li>",
+            );
+          } else {
+            items.push(
+              '<li class="page-item"><a class="page-link" href="' +
+                escapeAttr(catalogPageHref(sectionId, p)) +
+                '">' +
+                String(p) +
+                "</a></li>",
+            );
+          }
+        }
+        items.push(
+          '<li class="page-item' + (nextDis ? " disabled" : "") + '">' +
+            (nextDis
+              ? '<span class="page-link">Следующая</span>'
+              : '<a class="page-link" href="' + escapeAttr(catalogPageHref(sectionId, page + 1)) + '">Следующая</a>') +
+            "</li>",
+        );
+        pagesEl.innerHTML = items.join("");
+      }
+
+      function pluralTovarov(n) {
+        const m10 = n % 10;
+        const m100 = n % 100;
+        if (m100 >= 11 && m100 <= 14) return "товаров";
+        if (m10 === 1) return "товара";
+        if (m10 >= 2 && m10 <= 4) return "товара";
+        return "товаров";
+      }
+
+      function buildProductCard(id) {
+        const p = products[id];
+        if (!p) return "";
+        const badge = p.badge
+          ? `<span class="badge ${
+              p.badgeClass || "text-bg-light border"
+            } product-badge">${escapeHtml(p.badge)}</span>`
+          : "";
+        const priceText = p.priceStr || p.price;
+        const extImg = p.imageUrl
+          ? `<div class="product-img product-img--roses-external" style="background-image:url('${String(
+              p.imageUrl,
+            ).replace(/'/g, "%27")}')"></div>`
+          : `<div
+                  class="product-img product-img--${p.img}"
+                  role="img"
+                  aria-label="Букет ${escapeAttr(p.name)}"
+                ></div>`;
+        return `
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <article class="product card h-100">
+            <div class="product-media">
+              <a
+                class="product-link"
+                href="./product.html?id=${encodeURIComponent(id)}"
+                aria-label="Открыть товар: ${escapeAttr(p.name)}"
+              >
+                ${extImg}
+              </a>
+              ${badge}
+            </div>
+            <div class="card-body">
+              <h3 class="h5 fw-semibold mb-1">
+                <a
+                  class="link-dark link-underline link-underline-opacity-0"
+                  href="./product.html?id=${encodeURIComponent(id)}"
+                >
+                  ${escapeHtml(p.name)}
+                </a>
+              </h3>
+              <p class="text-secondary mb-3">${escapeHtml(p.desc)}</p>
+              <div class="d-flex justify-content-between align-items-center gap-2">
+                <div class="fw-bold fs-5">${escapeHtml(priceText)}</div>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-light border btn-sm" href="./product.html?id=${encodeURIComponent(id)}"
+                    >Подробнее</a
+                  >
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-florista-add
+                    data-florista-id="${encodeURIComponent(id)}"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      `;
+      }
+
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function escapeAttr(s) {
+        return escapeHtml(s);
+      }
+
+      const sectionParam = new URLSearchParams(location.search).get("id") || defaultSectionId;
+      const sec = sections[sectionParam] || sections[defaultSectionId];
+
+      const allProductIds = sec.productIds || [];
+      const catalogTotal = allProductIds.length;
+      let catalogPage = parseInt(new URLSearchParams(location.search).get("page") || "1", 10);
+      if (Number.isNaN(catalogPage) || catalogPage < 1) catalogPage = 1;
+      const catalogTotalPages = Math.max(1, Math.ceil(catalogTotal / CATALOG_PER_PAGE));
+      if (catalogPage > catalogTotalPages) catalogPage = catalogTotalPages;
+      const catalogStart = (catalogPage - 1) * CATALOG_PER_PAGE;
+      const pagedProductIds = allProductIds.slice(catalogStart, catalogStart + CATALOG_PER_PAGE);
+
+      document.getElementById("sectionTitle").textContent = sec.title;
+      document.getElementById("sectionCrumb").textContent = sec.title;
+      document.getElementById("sectionLead").textContent = sec.lead;
+      document.getElementById("sectionListTitle").textContent = sec.listTitle;
+      document.getElementById("sectionListLead").textContent = sec.listLead;
+      document.getElementById("sectionBack").setAttribute("href", sec.backHref);
+      const meta = document.querySelector("meta[name=\"description\"]");
+      if (meta) meta.setAttribute("content", sec.meta);
+      document.title =
+        catalogPage > 1
+          ? `${sec.title} — стр. ${String(catalogPage)} — Florista`
+          : `${sec.title} — Florista`;
+
+      const media = document.getElementById("sectionMedia");
+      media.className = "section-page-visual flex-grow-1 cat-media " + sec.mediaClass;
+
+      const sub = document.getElementById("sectionSublinks");
+      if (Array.isArray(sec.sublinks) && sec.sublinks.length) {
+        sub.removeAttribute("hidden");
+        sub.innerHTML = sec.sublinks
+          .map(
+            (l) =>
+              `<a class="btn btn-sm btn-light border" href="${l.href}">${escapeHtml(
+                l.label
+              )}</a>`,
+          )
+          .join("");
+      } else {
+        sub.setAttribute("hidden", "");
+        sub.innerHTML = "";
+      }
+
+      const badges = document.getElementById("sectionBadges");
+      if (Array.isArray(sec.badges) && sec.badges.length) {
+        badges.innerHTML = sec.badges
+          .map(
+            (b) =>
+              `<span class="badge text-bg-light border rounded-pill px-3 py-2">${escapeHtml(
+                b,
+              )}</span>`,
+          )
+          .join("");
+      } else {
+        badges.innerHTML = "";
+      }
+
+      const grid = document.getElementById("sectionProductGrid");
+      grid.innerHTML = pagedProductIds.map((pid) => buildProductCard(pid)).filter(Boolean).join("");
+
+      buildCatalogPagination(sectionParam, catalogPage, CATALOG_PER_PAGE, catalogTotal);
+    </script>
+  </body>
+</html>

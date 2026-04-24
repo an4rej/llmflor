@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Оформление заказа — Florista, доставка в Томске." />
+    <title>Оформление заказа — Florista</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="sticky-top header-blur border-bottom">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-2">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+            <img
+              class="brand-logo"
+              src="./assets/logo21.png"
+              width="36"
+              height="36"
+              alt="Florista"
+              loading="eager"
+              decoding="async"
+            />
+            <span class="fw-bold">Florista</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMain"
+            aria-controls="navMain"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="./index.html#catalog"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Каталог
+                </a>
+                <div class="dropdown-menu dropdown-menu-end p-2 catalog-menu">
+                  <div class="catalog-mega" role="menu">
+                    <div class="catalog-mega-left" aria-label="Разделы каталога">
+                      <a class="dropdown-item catalog-top" href="./section.html?id=sale">Акции</a>
+                      <a class="dropdown-item catalog-top" href="./section.html?id=roses">Розы</a>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=bouquets">Букеты</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Букеты">
+                          <h6 class="dropdown-header">Букеты</h6>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-mixed">Сборные букеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-mono">Монобукеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-compliments">Комплименты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-exclusive">Эксклюзивные букеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-durable">Букеты из стойких цветов</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-roses">Букеты с розами</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-chrysanthemum">Букеты с хризантемой</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-alstroemeria">Букеты с альстромерией</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-peonies">Букеты с пионами</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-orchid">Букеты с орхидеей</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-hydrangea">Букеты с гортензией</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-gypsophila">Букеты с гипсофилой</a>
+                          <a class="dropdown-item" href="./section.html?id=bouquets-tulips">Букеты с тюльпанами</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=compositions">Композиции</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Композиции">
+                          <h6 class="dropdown-header">Композиции</h6>
+                          <a class="dropdown-item" href="./section.html?id=comp-roses">Композиции из роз</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-mixed">Сборные композиции</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-baskets">Корзины с цветами</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-hatboxes">Композиции в шляпной коробке</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-heart">Композиции в сердце</a>
+                          <a class="dropdown-item" href="./section.html?id=comp-boxes">Коробки и сумочки с цветами</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=balloons">Воздушные шары</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Воздушные шары">
+                          <h6 class="dropdown-header">Воздушные шары</h6>
+                          <a class="dropdown-item" href="./section.html?id=bal-foil">Фольгированные</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-latex">Латексные</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-men">Шары для мужчины</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-girl">Шары для девушки</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-birthday">Шары на день рождения</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-maternity">Выписка из роддома</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-box">Коробка с шарами</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-piece">Поштучно</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-sets">Сеты</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-stars">Звезды</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-numbers">Цифры</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="./section.html?id=bal-14feb">Шары на 14 февраля</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-23feb">Шары на 23 февраля</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-wedding">Шары на свадьбу</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-graduation">Шары на выпускной</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-kindergarten">Шары в детский сад</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-8mar">Шары на 8 марта</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-mothersday">Шары на день матери</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-anniversary">Шары на юбилей</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-newyear">Шары на Новый год</a>
+                          <a class="dropdown-item" href="./section.html?id=bal-1sep">Шары на 1 сентября</a>
+                        </div>
+                      </div>
+
+                      <div class="catalog-top-item">
+                        <a class="dropdown-item catalog-top" href="./section.html?id=gifts">Подарки</a>
+                        <div class="catalog-subpanel" aria-label="Подразделы: Подарки">
+                          <h6 class="dropdown-header">Подарки</h6>
+                          <a class="dropdown-item" href="./section.html?id=gifts-toys">Игрушки</a>
+                          <a class="dropdown-item" href="./section.html?id=gifts-sweets">Конфеты и сладкие подарки</a>
+                          <a class="dropdown-item" href="./section.html?id=gifts-balloons">Воздушные шары к букету</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-mega-hint text-secondary small">
+                      Наведите курсор на раздел, чтобы увидеть подразделы.
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#why">Почему мы</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#delivery">Доставка</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#reviews">Отзывы</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#contacts">Контакты</a></li>
+              <li class="nav-item py-1 py-lg-0 dropdown" id="floristaNavCart">
+                <button
+                  type="button"
+                  class="btn position-relative p-2 rounded-3 d-flex align-items-center justify-content-center text-body bg-transparent border-0"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                  aria-label="Корзина. Товаров: 0"
+                  id="floristaCartBtn"
+                >
+                  <span class="florista-cart-ico" aria-hidden="true">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 8V6C9 4.34 10.34 3 12 3C13.66 3 15 4.34 15 6V8"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M5 8.5H19L20 21H4L5 8.5Z"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary florista-cart-badge"
+                    id="floristaCartCount"
+                    style="min-width: 1rem; font-size: 0.6rem; padding: 0.2rem 0.4rem"
+                    hidden
+                    >0</span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-end p-0 mini-cart"
+                  aria-label="Содержимое корзины"
+                  style="min-width: min(100vw - 2rem, 380px)"
+                >
+                  <div class="p-3 border-bottom d-flex align-items-center justify-content-between gap-2">
+                    <span class="fw-bold">Корзина</span>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-link text-secondary text-decoration-none p-0"
+                      id="floristaCartClear"
+                    >
+                      Очистить
+                    </button>
+                  </div>
+                  <div class="mini-cart__body" id="floristaCartList"></div>
+                  <p class="mini-cart__empty p-3 mb-0 text-center text-secondary small" id="floristaCartEmpty">
+                    Корзина пуста. Добавьте букет из каталога.
+                  </p>
+                  <div class="p-3 border-top" id="floristaCartFooter" hidden>
+                    <div class="d-flex justify-content-between align-items-baseline mb-2">
+                      <span class="text-secondary">Итого</span>
+                      <span class="fw-bold fs-5" id="floristaCartTotal">0 ₽</span>
+                    </div>
+                    <a class="btn btn-primary w-100" id="floristaCartCheckout" href="./checkout.html"
+                      >Оформить заказ</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <button
+                  class="btn btn-primary btn-sm px-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="py-4 py-lg-5 section-soft">
+      <div class="container">
+        <nav aria-label="Навигация по ссылкам" class="mb-3">
+          <ol class="breadcrumb small mb-0">
+            <li class="breadcrumb-item"><a class="link-secondary" href="./index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a class="link-secondary" href="./index.html#catalog">Каталог</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Оформление заказа</li>
+          </ol>
+        </nav>
+
+        <div id="checkoutEmpty" class="text-center py-5 px-3" hidden>
+          <div class="feature mx-auto border-0 shadow-sm" style="max-width: 420px">
+            <h1 class="h3 fw-bold mb-2">Корзина пуста</h1>
+            <p class="text-secondary mb-4">Добавьте букет или товар, чтобы оформить доставку.</p>
+            <a class="btn btn-primary" href="./index.html#catalog">Перейти в каталог</a>
+          </div>
+        </div>
+
+        <div id="checkoutLayout" class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-lg-7 order-2 order-lg-1">
+            <h1 class="h2 fw-bold mb-1">Оформление заказа</h1>
+            <p class="text-secondary mb-4">
+              Заполните поля. Это демо: оплата не проходит, данные к серверу не уходят.
+            </p>
+            <form id="checkoutForm" class="card border-0 feature p-3 p-md-4 rounded-4 shadow-sm" novalidate>
+              <h2 class="h5 fw-bold mb-3">Контакты</h2>
+              <div class="row g-3 mb-4">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="chName">Имя и фамилия *</label>
+                  <input type="text" class="form-control" id="chName" name="name" required autocomplete="name" />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="chPhone">Телефон *</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="chPhone"
+                    name="phone"
+                    required
+                    inputmode="tel"
+                    autocomplete="tel"
+                    placeholder="+7"
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="chEmail"
+                    >E-mail <span class="text-secondary small">(по желанию)</span></label
+                  >
+                  <input type="email" class="form-control" id="chEmail" name="email" autocomplete="email" />
+                </div>
+              </div>
+              <h2 class="h5 fw-bold mb-2">Доставка</h2>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="chNeedDelivery"
+                  name="needDelivery"
+                  value="1"
+                  checked
+                  aria-controls="chRecipientBlock"
+                />
+                <label class="form-check-label" for="chNeedDelivery">Нужна доставка</label>
+              </div>
+              <div id="chRecipientBlock" class="row g-3 mb-2">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="chRecipientName">Имя получателя *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="chRecipientName"
+                    name="recipientName"
+                    autocomplete="section-recipient name"
+                    placeholder="Кому вручать букет"
+                  />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="chRecipientPhone">Телефон получателя *</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="chRecipientPhone"
+                    name="recipientPhone"
+                    inputmode="tel"
+                    autocomplete="section-recipient tel"
+                    placeholder="+7"
+                  />
+                </div>
+              </div>
+              <div class="row g-3 mb-4">
+                <div class="col-12 col-md-5">
+                  <label class="form-label" for="chCity">Город *</label>
+                  <input type="text" class="form-control" id="chCity" name="city" required value="Томск" />
+                </div>
+                <div class="col-12 col-md-7">
+                  <label class="form-label" for="chAddress">Адрес *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="chAddress"
+                    name="address"
+                    required
+                    placeholder="Улица, дом, кв./офис"
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="chAddressExtra">Домофон, подъезд, этаж</label>
+                  <input type="text" class="form-control" id="chAddressExtra" name="addressExtra" />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="chDate">Дата *</label>
+                  <input type="date" class="form-control" id="chDate" name="date" required />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="chTime">Время (интервал) *</label>
+                  <select class="form-select" id="chTime" name="time" required>
+                    <option value="9-12">9:00 – 12:00</option>
+                    <option value="12-15" selected>12:00 – 15:00</option>
+                    <option value="15-18">15:00 – 18:00</option>
+                    <option value="18-21">18:00 – 21:00</option>
+                    <option value="call">Согласовать по телефону</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="chComment">Пожелания</label>
+                  <textarea
+                    class="form-control"
+                    id="chComment"
+                    name="comment"
+                    rows="3"
+                    placeholder="Повод, аллергии, детали вручения…"
+                  ></textarea>
+                </div>
+              </div>
+              <h2 class="h5 fw-bold mb-3">Оплата</h2>
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="pay" id="chPayCash" value="cash" checked />
+                  <label class="form-check-label" for="chPayCash">Наличными или картой курьеру</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="pay" id="chPayCard" value="card" />
+                  <label class="form-check-label" for="chPayCard">Онлайн (в демо не настроена)</label>
+                </div>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" value="1" id="chAgree" name="agree" required />
+                <label class="form-check-label" for="chAgree"
+                  >Соглашаюсь с условиями доставки (демо).</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg px-4" id="checkoutSubmitBtn">Подтвердить заказ</button>
+            </form>
+          </div>
+          <div class="col-12 col-lg-5 order-1 order-lg-2">
+            <div
+              class="checkout-summary-card feature p-3 p-md-4 rounded-4 border-0 shadow-sm"
+              id="checkoutSummaryCard"
+            >
+              <h2 class="h5 fw-bold mb-3">Ваш заказ</h2>
+              <div class="d-flex flex-column gap-3 mb-3" id="checkoutLines" aria-live="polite"></div>
+              <hr class="my-2" />
+              <div class="d-flex justify-content-between small text-secondary">
+                <span>Товары</span>
+                <span id="checkoutSubtotal">0 ₽</span>
+              </div>
+              <div class="d-flex justify-content-between small text-secondary mt-1">
+                <span>Доставка (Томск)</span>
+                <span class="text-success" id="checkoutDelivery">бесплатно</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-baseline mt-2 pt-2 border-top">
+                <span class="fw-bold">К оплате</span>
+                <span class="fs-4 fw-bold" id="checkoutGrand">0 ₽</span>
+              </div>
+              <p class="text-secondary small mt-3 mb-0">Перед отправкой согласуем фото, открытка и лента 0 ₽ — в комментариях к заказу.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="checkoutSuccess" class="text-center py-5 px-3" hidden>
+          <div class="feature mx-auto p-4 p-md-5 border-0 shadow-sm" style="max-width: 520px">
+            <p class="display-6 text-success mb-2" aria-hidden="true">✓</p>
+            <h1 class="h2 fw-bold mb-2">Заказ принят</h1>
+            <p class="text-secondary mb-4">
+              Номер демо-заявки: <strong id="checkoutOrderId">—</strong>. Мы перезвоним для уточнения времени.
+            </p>
+            <div class="d-flex flex-wrap gap-2 justify-content-center">
+              <a class="btn btn-primary" href="./index.html">На главную</a>
+              <a class="btn btn-light border" href="./index.html#catalog">К каталогу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 border-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="text-secondary small">
+            © <span id="year">2026</span> Florista. Оформление заказа.
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="link-secondary link-underline link-underline-opacity-0" href="./index.html#catalog">Каталог</a>
+            <a class="link-secondary link-underline link-underline-opacity-0" href="./index.html#delivery">Доставка</a>
+            <a class="link-secondary link-underline link-underline-opacity-0" href="./index.html#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрый заказ</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="orderName">Имя</label>
+                <input id="orderName" class="form-control" placeholder="Как к вам обращаться?" autocomplete="name" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderPhone">Телефон</label>
+                <input
+                  id="orderPhone"
+                  class="form-control"
+                  placeholder="+7 (___) ___‑__‑__"
+                  inputmode="tel"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="orderNote">Пожелания</label>
+                <textarea
+                  id="orderNote"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Повод, любимые цвета, что точно не добавлять…"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-text text-secondary">
+                  Форма демонстрационная, отправка не настроена.
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Отмена</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./roses-data.js"></script>
+    <script src="./bouquets-data.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      (function () {
+        const FC = window.FloristaCart;
+        if (!FC) return;
+
+        const elEmpty = document.getElementById("checkoutEmpty");
+        const elLayout = document.getElementById("checkoutLayout");
+        const elSuccess = document.getElementById("checkoutSuccess");
+        const elLines = document.getElementById("checkoutLines");
+        const chDate = document.getElementById("chDate");
+        const form = document.getElementById("checkoutForm");
+        const chNeedDelivery = document.getElementById("chNeedDelivery");
+        const chRecipientBlock = document.getElementById("chRecipientBlock");
+        const chRecipientName = document.getElementById("chRecipientName");
+        const chRecipientPhone = document.getElementById("chRecipientPhone");
+
+        function syncRecipientByDelivery() {
+          if (!chNeedDelivery || !chRecipientBlock) return;
+          if (chNeedDelivery.checked) {
+            chRecipientBlock.removeAttribute("hidden");
+            chNeedDelivery.setAttribute("aria-expanded", "true");
+            if (chRecipientName) chRecipientName.setAttribute("required", "");
+            if (chRecipientPhone) chRecipientPhone.setAttribute("required", "");
+          } else {
+            chRecipientBlock.setAttribute("hidden", "");
+            chNeedDelivery.setAttribute("aria-expanded", "false");
+            if (chRecipientName) chRecipientName.removeAttribute("required");
+            if (chRecipientPhone) chRecipientPhone.removeAttribute("required");
+          }
+        }
+
+        function toYmd(d) {
+          return (
+            d.getFullYear() +
+            "-" +
+            String(d.getMonth() + 1).padStart(2, "0") +
+            "-" +
+            String(d.getDate()).padStart(2, "0")
+          );
+        }
+
+        function setDateMin() {
+          if (!chDate) return;
+          const t = new Date();
+          chDate.setAttribute("min", toYmd(t));
+          if (!chDate.value) chDate.value = toYmd(t);
+        }
+
+        function esc(s) {
+          return String(s)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+
+        function renderSummary() {
+          const items = FC.get();
+          const total = FC.total();
+          if (!elLines) return;
+          if (!items.length) return;
+          elLines.innerHTML = items
+            .map(function (line) {
+              const sub = FC.lineTotal(line);
+              return (
+                '<div class="d-flex gap-2 align-items-start pb-2 border-bottom border-light">' +
+                '<div class="flex-grow-1 min-w-0">' +
+                '<div class="small fw-semibold text-truncate">' + esc(line.name) + "</div>" +
+                '<div class="text-secondary small">× ' + String(line.qty) + "</div></div>" +
+                '<div class="text-end text-nowrap small fw-semibold">' + esc(FC.formatPrice(sub)) + "</div></div>"
+              );
+            })
+            .join("");
+          const sub = document.getElementById("checkoutSubtotal");
+          const grand = document.getElementById("checkoutGrand");
+          if (sub) sub.textContent = FC.formatPrice(total);
+          if (grand) grand.textContent = FC.formatPrice(total);
+        }
+
+        function runInit() {
+          setDateMin();
+          const items = FC.get();
+          if (!items.length) {
+            if (elEmpty) elEmpty.removeAttribute("hidden");
+            if (elLayout) elLayout.setAttribute("hidden", "");
+            document.title = "Корзина пуста — Florista";
+            return;
+          }
+          if (elEmpty) elEmpty.setAttribute("hidden", "");
+          if (elLayout) elLayout.removeAttribute("hidden");
+          renderSummary();
+        }
+
+        runInit();
+
+        if (chNeedDelivery) {
+          chNeedDelivery.addEventListener("change", syncRecipientByDelivery);
+          syncRecipientByDelivery();
+        }
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (form.checkValidity() === false) {
+              form.reportValidity();
+              return;
+            }
+            if (!FC.get().length) return;
+            const n = 100000 + Math.floor(Math.random() * 899999);
+            const oid = document.getElementById("checkoutOrderId");
+            if (oid) oid.textContent = "#" + String(n);
+            if (elLayout) elLayout.setAttribute("hidden", "");
+            if (elEmpty) elEmpty.setAttribute("hidden", "");
+            if (elSuccess) elSuccess.removeAttribute("hidden");
+            FC.clear();
+            FC.refresh();
+            document.title = "Заказ оформлен — Florista";
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
+
