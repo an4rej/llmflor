@@ -1,14 +1,12 @@
-# Автодеплой на Timeweb при push в main (FTP).
-# Секреты: Settings → Secrets and variables → Actions → Repository secrets
+# Автодеплой на Timeweb при push в main (FTP через GitHub Actions).
 #
-# Обязательные:
-#   FTP_SERVER      — IP или FTP-хост из панели Timeweb (например 92.53.xx.xx)
-#   FTP_USERNAME    — логин FTP (часто совпадает с логином хостинга)
-#   FTP_PASSWORD    — пароль FTP
-#   FTP_SERVER_DIR  — каталог на сервере ОТНОСИТЕЛЬНО корня FTP, со слэшем в конце.
-#                     Часто: i.solflo.ru/public_html/  (см. путь в файловом менеджере / FileZilla)
+# Секреты (Settings → Secrets and variables → Actions → Secrets):
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_SERVER_DIR
+#   FTP_SERVER_DIR — путь от корня FTP со слэшем в конце, например: i.solflo.ru/public_html/
 #
-# Если коннект падает по TLS — в шаге Deploy раскомментируйте protocol и security.
+# Переменные (та же страница → вкладка Variables), необязательно:
+#   FTP_DEPLOY_PROTOCOL — пусто или ftp → обычный FTP; значение ftps → FTPS + loose TLS
+#   FTP_PORT            — порт (по умолчанию 21, если переменная не задана)
 
 name: Deploy to Timeweb
 
@@ -17,6 +15,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
   group: deploy-timeweb-${{ github.ref }}
   cancel-in-progress: true
@@ -24,7 +25,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -43,21 +44,47 @@ jobs:
           [ -z "$FTP_PASSWORD" ] && missing="${missing} FTP_PASSWORD"
           [ -z "$FTP_SERVER_DIR" ] && missing="${missing} FTP_SERVER_DIR"
           if [ -n "$missing" ]; then
-            echo "::error::В GitHub не заданы секреты:$missing. Репозиторий → Settings → Secrets and variables → Actions."
+            echo "::error::Добавьте секреты Actions:$missing"
             exit 1
           fi
+          case "$FTP_SERVER_DIR" in
+            */) ;;
+            *)
+              echo "::error::FTP_SERVER_DIR должен заканчиваться на /"
+              exit 1
+              ;;
+          esac
 
       - name: Deploy по FTP
+        if: ${{ vars.FTP_DEPLOY_PROTOCOL != 'ftps' }}
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          # Timeweb часто даёт обычный FTP:21. Если нужен FTPS — раскомментируйте две строки ниже.
-          # protocol: ftps
-          # security: loose
+          port: ${{ vars.FTP_PORT || '21' }}
           log-level: standard
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
+
+      - name: Deploy по FTPS
+        if: ${{ vars.FTP_DEPLOY_PROTOCOL == 'ftps' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          protocol: ftps
+          security: loose
+          port: ${{ vars.FTP_PORT || '21' }}
+          log-level: standard
+          timeout: 120000
           exclude: |
             **/.git*
             **/.git*/**
