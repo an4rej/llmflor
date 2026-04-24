@@ -1,12 +1,16 @@
 # Автодеплой на Timeweb при push в main (FTP через GitHub Actions).
 #
-# Секреты (Settings → Secrets and variables → Actions → Secrets):
+# Секреты → Actions → Secrets:
 #   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_SERVER_DIR
-#   FTP_SERVER_DIR — путь от корня FTP со слэшем в конце, например: i.solflo.ru/public_html/
+#   FTP_SERVER_DIR — путь ОТ КОРНЯ FTP при входе в FileZilla, со слэшем в конце.
+#   Частая ошибка: заливка в public_html/ у корня, тогда сайт лежит в i.solflo.ru/public_html/
 #
-# Переменные (та же страница → вкладка Variables), необязательно:
-#   FTP_DEPLOY_PROTOCOL — пусто или ftp → обычный FTP; значение ftps → FTPS + loose TLS
-#   FTP_PORT            — порт (по умолчанию 21, если переменная не задана)
+# Variables: FTP_DEPLOY_PROTOCOL=ftps, FTP_PORT
+#
+# Если в Actions «успех», а на сайте старые файлы:
+#   1) Проверьте FTP_SERVER_DIR = тот же каталог, откуда открывается сайт в файловом менеджере Timeweb.
+#   2) Запустите workflow вручную с галкой «Полная перезаливка» (очистит server-dir и зальёт заново).
+#   3) Либо по FTP удалите на сервере файл .ftp-deploy-sync-state.json (если остался от старых тестов).
 
 name: Deploy to Timeweb
 
@@ -14,6 +18,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      full_reset:
+        description: Полная перезаливка (удаляет содержимое server-dir, затем заливает репозиторий)
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -30,6 +40,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Что уходит на сервер (проверка)
+        run: |
+          echo "Корень репозитория:"
+          ls -la
+          if [ -f index.html ]; then
+            echo "index.html первые байты:"
+            head -c 200 index.html | wc -c
+            echo "(в логе сравните с тем, что открываете на хостинге по FTP)"
+          fi
 
       - name: Проверка секретов
         env:
@@ -64,6 +84,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           port: ${{ vars.FTP_PORT || '21' }}
+          # Отдельный state-файл — после смены с дефолтного будет полная пересинхронизация хешей
+          state-name: .deploy-state/llmflor-ftp-deploy.json
+          dangerous-clean-slate: ${{ github.event_name == 'workflow_dispatch' && inputs.full_reset == true }}
           log-level: standard
           timeout: 120000
           exclude: |
@@ -83,6 +106,8 @@ jobs:
           protocol: ftps
           security: loose
           port: ${{ vars.FTP_PORT || '21' }}
+          state-name: .deploy-state/llmflor-ftp-deploy.json
+          dangerous-clean-slate: ${{ github.event_name == 'workflow_dispatch' && inputs.full_reset == true }}
           log-level: standard
           timeout: 120000
           exclude: |
